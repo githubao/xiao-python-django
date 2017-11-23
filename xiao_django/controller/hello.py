@@ -9,9 +9,18 @@
 """
 
 from django.http import HttpResponse
+from django.shortcuts import render
+
 
 def say_sth(request):
+    context = {}
+    context['hello'] = 'good again with template'
+    return render(request, 'hello.html', context)
+
+
+def say_sth1(request):
     return HttpResponse('good! good! good!')
+
 
 def main():
     print('do sth')

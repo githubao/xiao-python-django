@@ -20,7 +20,7 @@ Including another URLconf
 
 from django.conf.urls import url
 
-from xiao_django.views import hello
+from xiao_django.controller import hello
 
 urlpatterns = [
     url(r'^hello$', hello.say_sth),
